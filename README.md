@@ -5,4 +5,4 @@ All code written by Oliver Björck
 
 ## Additional
 
-Additional coding knowledge obtained from computer science course at Brunel University and free online tutorials
+Additional coding knowledge obtained from computer science course at Brunel University, free online tutorials, and MDN
