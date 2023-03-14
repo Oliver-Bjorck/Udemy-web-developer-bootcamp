@@ -1,44 +1,63 @@
 <!--Content copied from HTML-The-Essentials file-->
 <!DOCTYPE html>
 
+<!--additional semantic elements include:
+article - represents a self-contained composition in a document
+aside - represents a protion of a document whose content is only indirectly related to the main content
+header - represents introductory content
+footer - represents a footer (author, copyright data, etc.)
+time - represents a specific period in time, can include the datetime attribute to translate dates into machine-readable format
+figure - represents self-contained content, potentially with an optional caption (figcaption)
+All of these operate in the same manner as a div, but provide better readability to the HTML document and are beneficial for those who use screen readers-->
+
 <html> 
     <head> 
         <title>First HTML Page</title>
     </head>
     <body> 
-        <h1>Hello World</h1>
-        <hr> <!--hr adds a line break between paragraph elements-->
+        <nav> <!--denotes navigation content-->
+            <ul>
+                <li><a href="home">HOME</a></li>
+                <li><a href="about">ABOUT</a></li>
+                <li><a href="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <main> <!--dominant content of the <body> of a document, shouldn't include content repeated on other pages (nav bars, footers, etc.)-->
+            <h1>Hello World</h1>
+            <hr> <!--hr adds a line break between paragraph elements-->
 
-        <!--There are reserved characters in HTML such as <, this will need entity codes-->
-        <h1>1 &lt; 6 &gt; 5</h1> <!--these codes generate the reserved characters-->
-        <a href="https://entitycode.com/#math-content">HTML entity codes</a>
+            <!--There are reserved characters in HTML such as <, this will need entity codes-->
+            <h1>1 &lt; 6 &gt; 5</h1> <!--these codes generate the reserved characters-->
+            <a href="https://entitycode.com/#math-content">HTML entity codes</a>
 
-        <h2>Auguries of Innocence</h2>
-        <p>
-            To see a World in a Grain of Sand <br> <!--br creates a break between text-->
-            And a Heaven in a Wild Flower <br>
-            Hold Infinity in the palm of your hand <br>
-            And Eternity in an hour <br>
-            A Robin Red breast in a Cage <br>
-        </p>
+            <section> <!--represents a standalone section which doesn't have a more specific semantic element-->
+                <h2>Auguries of Innocence</h2>
+                <p>
+                    To see a World in a Grain of Sand <br> <!--br creates a break between text-->
+                    And a Heaven in a Wild Flower <br>
+                    Hold Infinity in the palm of your hand <br>
+                    And Eternity in an hour <br>
+                    A Robin Red breast in a Cage <br>
+                </p>
+            </section>
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg">
             <img src="E:\Code Work\Udemy-web-developer-bootcamp\Additional-Files\White-lion.jpg" alt="Picture of a white lion">
 
-            <div> <!--Container to set content within its own block-->
+            <div> <!--Generic container to set content within its own block-->
                 <a href="http://www.google.com">I am a <span>link</span></a> <!--generic inline container for phrasing content-->
-            
+                
                 <a href="Pangolin-Practice.html">Link to Pangolin Pratcice document</a>
             </div>
 
             <h2>This is an h2 heading</h2>
-        
+            
             <p>This is my very first <b>HTML</b> page</p>
-        
+            
             <p>This line is to show the importance of paragraph elements</p>
-        
+            
             <h3>this is an h3 heading</h3>
-           
+            
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit<sup>[fake citation]</sup> <!--sup elevates text above the baseline-->. Consequatur, dolorem! Ipsam inventore odit maiores quis quia rerum odio ab temporibus aspernatur rem, exercitationem, eius aliquam explicabo tempore quam quaerat nemo!
             Maxime magnam perspiciatis nesciunt, voluptate non eum consequuntur molestias beatae ea itaque eligendi assumenda! Suscipit sunt consectetur officiis, optio nostrum officia, mollitia error quasi provident molestiae tempore nam animi deserunt.
             Sequi, vitae ex! Amet qui illo nulla possimus cupiditate. Vero laboriosam fuga nihil magni reprehenderit sequi repudiandae, sed at excepturi. Dignissimos eaque pariatur iusto dolore numquam corrupti cupiditate? Autem, sed.</p> <!--filler text-->
@@ -51,7 +70,7 @@
                 <li>This is the fourth item</li>
                 <li>this is a list within a list
                     <ul>
-                        <li>item one</li>
+                          <li>item one</li>
                         <li>item two</li>
                     </ul>
                 </li>
@@ -65,5 +84,13 @@
                 <li>This is the fourth item</li>
             </ol>
             <h2>I like H<sub>2</sub><!--sub lowers text below the baseline-->O</h2>
+        </main>
+        <footer>
+            <p>This is my website</p>
+            <ul>
+                <li><a href="asd">Contact</a></li>
+                <li><a href="efs">Help</a></li>
+            </ul>
+        </footer>
     </body>
 </html>
