@@ -73,10 +73,23 @@
 
         <h2>Form</h2>
         <form action=""> <!--form creates a form, action indicates where the information should be sent-->
-            <input type="text" placeholder="username"> <!--creates a text field input, placeholder attribute places descriptive text within the field-->
-            <input type="password" placeholder="password"> <!--creates a censored text field input-->
-            <input type="color"> <!--creates a colour picker input-->
-            <input type="number" placeholder="enter a number"> <!--creates a number field input-->
+            <p>
+                <label for="username">Enter a Username:</label> <!--creates a label for the input, for and id attributes used to link the label to the input-->
+                <input type="text" placeholder="username" id="username"> <!--creates a text field input, placeholder attribute places descriptive text within the field-->
+            </p>
+            <p>
+                <label for="password">Enter a Password:</label>
+                <input type="password" placeholder="password" id="password"> <!--creates a censored text field input-->
+            </p>
+            <p>
+                <label for="colour">Enter a Colour:</label>
+                <input type="color" id="colour"> <!--creates a colour picker input-->
+            </p>
+            <p>
+                <label for="number">Enter a Number:</label>
+                <input type="number" placeholder="enter a number" id="number"> <!--creates a number field input-->
+            </p>
+            
         </form>
     </body>
 </html>
