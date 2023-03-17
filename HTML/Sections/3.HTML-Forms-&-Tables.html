@@ -92,9 +92,36 @@
             <button>Submit</button> <!--creates a button, within a form element it will default to submitting the form-->
             <button type="button">Button</button> <!--type attribute changes function of button-->
         </form>
+        
+        <h2>Hijacking other websites</h2>
         <form action="https://www.google.com/search"> <!--We can hijack websites search functions such as google by using their search url-->
             <input type="text" name="q">
             <button>Search Google</button>
+        </form>
+
+        <h2>More inputs</h2>
+        <form action="/birds"></form>
+            <input type="checkbox" name="agree_tos" id="agree" checked> <!--creates a checkbox, checked attribute begins the checkbox as checked-->
+            <label for="agree">I agree to everything</label>
+            <p>
+                <label for="xs">XS:</label>
+                <input type="radio" name="size" id="xs" value="xs"> <!--radio type is similar to checkbox however only one checkbox can be selected at a time-->
+                <label for="s">S:</label>
+                <input type="radio" name="size" id="s" value="s">
+                <label for="m">M:</label>
+                <input type="radio" name="size" id="m" value="m">
+            </p>
+            <p>
+                <label for="meal">Please select an Entree</label>
+                <select name="meal" id="meal"> <!--select element creates a drop down menu-->
+                    <option value="">--Please Choose an Option--</option> <!--each option is created within an option element-->
+                    <option value="fish">Fish</option>
+                    <option value="veg">Vegetarian</option>
+                    <option value="steak">Steak</option>
+                </select>
+            </p>
+            <button>Submit</button>
+
         </form>
     </body>
 </html>
