@@ -100,7 +100,7 @@
         </form>
 
         <h2>More inputs</h2>
-        <form action="/birds"></form>
+        <form action="/birds">
             <input type="checkbox" name="agree_tos" id="agree" checked> <!--creates a checkbox, checked attribute begins the checkbox as checked-->
             <label for="agree">I agree to everything</label>
             <p>
@@ -130,6 +130,22 @@
             </p>
             <button>Submit</button>
 
+        </form>
+
+        <h2>Validations</h2>
+        <form action="/dummy">
+            <label for="first">Enter First Name</label>
+            <input type="text" name="first" id="first" required> <!--required attribute means the form can't be submitted without this input-->
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="20" required> <!--minlength and maxlength means it has to meet the minimum and/or maximum length requirement for the form to be submitted-->
+            </p>
+            <!--pattern attribute can be used to validate using a specified pattern-->
+            <p>
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" required> <!--type="email" has a pattern attribute built in-->
+            </p>
+            <button>Submit</button>
         </form>
     </body>
 </html>
