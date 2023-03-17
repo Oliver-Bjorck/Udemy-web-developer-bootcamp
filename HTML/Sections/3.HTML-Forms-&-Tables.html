@@ -75,19 +75,19 @@
         <form action=""> <!--form creates a form, action indicates where the information should be sent-->
             <p>
                 <label for="username">Enter a Username:</label> <!--creates a label for the input, for and id attributes used to link the label to the input-->
-                <input type="text" placeholder="username" id="username"> <!--creates a text field input, placeholder attribute places descriptive text within the field-->
+                <input type="text" placeholder="username" id="username" name="username"> <!--creates a text field input, placeholder attribute places descriptive text within the field-->
             </p>
             <p>
                 <label for="password">Enter a Password:</label>
-                <input type="password" placeholder="password" id="password"> <!--creates a censored text field input-->
+                <input type="password" placeholder="password" id="password" name="password"> <!--creates a censored text field input, name attribute sends data attributed to that name-->
             </p>
             <p>
                 <label for="colour">Enter a Colour:</label>
-                <input type="color" id="colour"> <!--creates a colour picker input-->
+                <input type="color" id="colour" name="colour"> <!--creates a colour picker input-->
             </p>
             <p>
                 <label for="number">Enter a Number:</label>
-                <input type="number" placeholder="enter a number" id="number"> <!--creates a number field input-->
+                <input type="number" placeholder="enter a number" id="number" name="number"> <!--creates a number field input-->
             </p>
             <button>Submit</button> <!--creates a button, within a form element it will default to submitting the form-->
             <button type="button">Button</button> <!--type attribute changes function of button-->
