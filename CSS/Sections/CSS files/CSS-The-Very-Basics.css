@@ -4,7 +4,7 @@ h2 {
 }
 
 button {
-    color: magenta;
+    color: #5FCFFC; /*they can also be designated using their hexidecimal code*/
     background-color: cyan; /*background-color changes the colour of the background*/
 }
 
