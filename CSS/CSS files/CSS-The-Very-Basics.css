@@ -1,0 +1,14 @@
+h2 {
+    color: teal; /*color changes the colour of the text*/
+    background-color: plum;
+}
+
+button {
+    color: magenta;
+    background-color: cyan; /*background-color changes the colour of the background*/
+}
+
+p{
+    color: olive;
+    background: orange; /*background can change colour, but it also has more options*/
+}
