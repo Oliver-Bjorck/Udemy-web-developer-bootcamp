@@ -1,6 +1,6 @@
 h2 {
     color: teal; /*color changes the colour of the text*/
-    background-color: plum;
+    background-color: plum; /*colours can be designated by name*/
 }
 
 button {
@@ -9,6 +9,6 @@ button {
 }
 
 p{
-    color: olive;
+    color: rgb(89, 151, 0); /*or by using their rgb number*/
     background: orange; /*background can change colour, but it also has more options*/
 }
