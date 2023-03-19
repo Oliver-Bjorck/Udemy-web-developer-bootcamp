@@ -1,0 +1,16 @@
+h1 {
+    text-align: center; /*aligns the text on the screen*/
+    font-weight: 700; /*sets the boldness of the text*/
+    text-decoration: #f820e6 underline wavy; /*sets appearance of decorative lines on text*/
+    letter-spacing: 15px; /*sets spacing between letters*/
+}
+
+p {
+    text-align: right;
+    font-weight: bold;
+    line-height: 2; /*sets spacing between line*/
+}
+
+a {
+    text-decoration: none; /*can be used to remove default decoration as well*/
+}
