@@ -19,3 +19,13 @@ h1,h2 { /*adding a comma creates a selector list, where you can assign multiple 
     color: #f1faee;
     background-color: #1d3557;
 }
+
+span {
+    color: #457b9d;
+}
+
+.tag { /*class selectors can be used to target groups of elements within an html document, they are denoted in CSS using a . symbol*/
+    background-color: #e63946;
+    color:#f1faee;
+    font-size: 16px;
+}
