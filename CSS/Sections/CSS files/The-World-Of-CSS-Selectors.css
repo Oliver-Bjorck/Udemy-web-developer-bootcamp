@@ -32,6 +32,8 @@ span {
 
 .post a { /*descendant selectors can be used to target elements nested within elements*/
     color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 footer a { /*they can be nested anywhere within the host element*/
@@ -53,4 +55,21 @@ input[type="password"] { /*attribute selector is used to target an element with 
 
 a[href*="google"] { /*you can also target href attributes containing certain keywords*/
     color: magenta;
+}
+
+.post button:hover { /*hover pseudo class affects elements when the cursor hovers over them*/
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active { /*active pseudo class affects elements when they're active (like clicking a button)*/
+    background-color: #02c39a;
+}
+
+.post:nth-of-type(2n) { /*nth-of-type pseudo class affects elements based on their position in a group, can target single elements or every nth element*/
+    background-color: #dfe8dc;
 }
