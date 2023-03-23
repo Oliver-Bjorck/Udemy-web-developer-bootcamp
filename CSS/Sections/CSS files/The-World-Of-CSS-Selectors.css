@@ -37,3 +37,12 @@ span {
 footer a { /*they can be nested anywhere within the host element*/
     color:#e63946;
 }
+
+h2 + button { /*adjacent selectors select elements that are immediately preceded by another element*/
+    font-size: 20px;
+    background-color: magenta;
+}
+
+footer > a { /*direct descendant selector only selects elements that are direct children of another element*/
+    color: #457b9d;
+}
