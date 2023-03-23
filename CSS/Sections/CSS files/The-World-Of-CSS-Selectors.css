@@ -29,3 +29,11 @@ span {
     color:#f1faee;
     font-size: 16px;
 }
+
+.post a { /*descendant selectors can be used to target elements nested within elements*/
+    color: #457b9d;
+}
+
+footer a { /*they can be nested anywhere within the host element*/
+    color:#e63946;
+}
