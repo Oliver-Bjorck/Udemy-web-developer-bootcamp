@@ -4,6 +4,8 @@ h1 {
     text-decoration: #f820e6 underline wavy; /*sets appearance of decorative lines on text*/
     letter-spacing: 15px; /*sets spacing between letters*/
     /*px (pixel) is an absolute sizing measurement*/
+    font-family: Papyrus, Futura, sans-serif; /*sets the font type of the chosen text*/
+    /*When two fonts are listed, this is called a font stack. The following fonts are backups to the first font, in case the user's machine doesn't support a particular font*/
 }
 
 p {
