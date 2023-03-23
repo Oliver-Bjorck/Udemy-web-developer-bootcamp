@@ -2,6 +2,10 @@
     background-color: cyan;
 }*/
 
+/*CSS stands for Cascading StyleSheet, which means that the order selectors are placed matters*/
+/*if two selectors are the same but attribute different properties, the one below will "win"*/
+/*the same applies for the order of linking stylesheets in an html document*/
+
 body {
     background-color:#f1faee;
 }
