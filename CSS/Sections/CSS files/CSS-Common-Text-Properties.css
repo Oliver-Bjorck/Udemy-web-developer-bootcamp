@@ -3,6 +3,7 @@ h1 {
     font-weight: 700; /*sets the boldness of the text*/
     text-decoration: #f820e6 underline wavy; /*sets appearance of decorative lines on text*/
     letter-spacing: 15px; /*sets spacing between letters*/
+    /*px (pixel) is an absolute sizing measurement*/
 }
 
 p {
