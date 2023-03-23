@@ -61,11 +61,6 @@ a[href*="google"] { /*you can also target href attributes containing certain key
     color: magenta;
 }
 
-.post button:hover { /*hover pseudo class affects elements when the cursor hovers over them*/
-    background-color: #e63946;
-    color: #f1faee;
-}
-
 .post a:hover {
     text-decoration: underline;
 }
@@ -89,3 +84,17 @@ p::first-line { /*first-line affects the first line*/
 p::selection { /* selection element affects the element when it is selected (e.g. highlighting text)*/
     background-color: #fcbf49;
 }
+
+.post button:hover { /*hover pseudo class affects elements when the cursor hovers over them*/
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+/*the above option is decided to be more specific as it inlcudes a class selector, and therefore has a higher specificity*/
+
+button:hover { /*Specificity is how the browser decides which rules to apply when multiple rules could apply to the same element*/
+    background-color: olive; /*here, the text size will change on all buttons when we hover, however the colour doesn't affect all buttons*/
+    font-size: 10px;
+}
+
+/*the order of specificity goes ID selectors > class, attribute, and pseudo-class selectors > element and pseudo-element selectors
