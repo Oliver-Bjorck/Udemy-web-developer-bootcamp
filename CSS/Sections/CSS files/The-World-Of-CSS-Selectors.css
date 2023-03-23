@@ -97,4 +97,4 @@ button:hover { /*Specificity is how the browser decides which rules to apply whe
     font-size: 10px;
 }
 
-/*the order of specificity goes ID selectors > class, attribute, and pseudo-class selectors > element and pseudo-element selectors
+/*the order of specificity goes inline styles > ID selectors > class, attribute, and pseudo-class selectors > element and pseudo-element selectors
