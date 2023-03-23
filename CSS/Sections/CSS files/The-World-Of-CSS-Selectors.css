@@ -1,0 +1,12 @@
+* { /*universal selector selects everything in the html document and applies the chosen properties accordingly*/
+    background-color: cyan;
+}
+
+button { /*element selector selects everything of a given type*/
+    font-size: 30px;
+}
+
+h1,h2 { /*adding a comma creates a selector list, where you can assign multiple selectors*/
+    color: darkslateblue;
+}
+
