@@ -46,3 +46,11 @@ h2 + button { /*adjacent selectors select elements that are immediately preceded
 footer > a { /*direct descendant selector only selects elements that are direct children of another element*/
     color: #457b9d;
 }
+
+input[type="password"] { /*attribute selector is used to target an element with a specific attribute*/
+    color: green;
+}
+
+a[href*="google"] { /*you can also target href attributes containing certain keywords*/
+    color: magenta;
+}
