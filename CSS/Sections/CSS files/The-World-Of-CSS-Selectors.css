@@ -1,12 +1,21 @@
-* { /*universal selector selects everything in the html document and applies the chosen properties accordingly*/
+/** { universal selector selects everything in the html document and applies the chosen properties accordingly
     background-color: cyan;
+}*/
+
+body {
+    background-color:#f1faee;
 }
 
 button { /*element selector selects everything of a given type*/
     font-size: 30px;
+    background-color: #a8dadc;
 }
 
 h1,h2 { /*adding a comma creates a selector list, where you can assign multiple selectors*/
-    color: darkslateblue;
+    color: #1d3557;
 }
 
+#signup { /*id selectors can be used to target a specific element within the html document, they are denoted in CSS using the # symbol*/
+    color: #f1faee;
+    background-color: #1d3557;
+}
