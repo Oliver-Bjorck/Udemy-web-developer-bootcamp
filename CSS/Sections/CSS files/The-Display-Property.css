@@ -1,0 +1,28 @@
+h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    width: 300px;
+    padding: 50px;
+    margin: 100px;
+    display: block; /*display property sets whether an element is treated as a block orm inline element*/
+}
+
+/* inline is won't respect properties such as width, padding, margin, in the same way the block will*/
+
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    display: inline-block; /*inline-block will make the elements act like inline elements whilst respecting height, width, etc. like a block element*/
+}
+
+/* display none will hide an element*/
