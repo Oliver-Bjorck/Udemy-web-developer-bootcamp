@@ -9,6 +9,7 @@ h1 {
     width: 100px;
     padding-left: 30px; /*padding sets space between content area and border*/
     padding-top: 50px; /*you can set padding using left, right, top, and bottom properties*/
+    margin-bottom: 0;
 }
 
 #one {
@@ -17,6 +18,8 @@ h1 {
     border-color: black; /*affects the coour of the border*/
     border-style: solid; /*affects the line style of the border*/
     box-sizing: border-box; /*sets the width of the element to the border*/
+    margin-left: 50px; /*margin affects the outside element padding*/
+    margin-bottom: 100px; /*you can target specific sides*/
 }
 
 #two {
@@ -25,6 +28,7 @@ h1 {
     border-width: 3px;
     border-style: dashed;
     border-left-width: 8px; /*can target certain sections of the border*/
+    margin: 200px; /*you can also use the shorthand*/
 }
 
 #three {
