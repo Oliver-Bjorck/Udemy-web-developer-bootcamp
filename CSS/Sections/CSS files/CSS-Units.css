@@ -15,3 +15,28 @@ h1 {
     border: 1px solid black;
     line-height: 200%; /*percentage does depend on the property you're using, for example here, it equates to half the font-size of the element*/
 }
+
+h2 {
+    font-size: 5em; /*em units set the size relative to its parent element, e.g. 2em is double the font-size of the parent*/
+    margin-left: 1em; /*in properties such as margin however, the size is determined relative to the element, not the parent*/
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+article {
+    font-size: 30px;
+}
+
+button {
+    font-size: 1em; /*ems help maintain proportions and shape when other elements change*/
+    padding: 0 1em;
+    border-radius: 0.5em;
+    background-color: #2a9d8f;
+    color: white;
+}
