@@ -1,10 +1,10 @@
-section {
+#percentages {
     background-color: #6d6875;
     width: 800px; /*px is an absolute unit, meaning it is fixed no matter what*/
     height: 800px;
 }
 
-div {
+#percentages div {
     background-color: #e5989b;
     width: 75%; /*percentage can be relative to its parent element and will change the size if the parent's size is changed*/
     height: 75%;
@@ -16,20 +16,20 @@ h1 {
     line-height: 200%; /*percentage does depend on the property you're using, for example here, it equates to half the font-size of the element*/
 }
 
-h2 {
+#ems h2 {
     font-size: 5em; /*em units set the size relative to its parent element, e.g. 2em is double the font-size of the parent*/
     margin-left: 1em; /*in properties such as margin however, the size is determined relative to the element, not the parent*/
 }
 
-h3 {
+#ems h3 {
     font-size: 1.5em;
 }
 
-p {
+#ems p {
     font-size: 1em;
 }
 
-article {
+#ems {
     font-size: 30px;
 }
 
@@ -39,4 +39,24 @@ button {
     border-radius: 0.5em;
     background-color: #2a9d8f;
     color: white;
+}
+
+ul {
+    font-size: 1.5em; 
+}
+
+#rems h2 {
+    font-size: 3rem; /*rem sets the sizing of elements based on the root element font-size*/
+}
+
+#rems h3 {
+    font-size: 2rem; /*this helps avoid situations where you have nested elements and therefore em would cause issues*/
+}
+
+#rems ul {
+    font-size: 0.8rem;
+}
+
+#rems button {
+    font-size: 1.5rem;
 }
