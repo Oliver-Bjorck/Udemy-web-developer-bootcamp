@@ -1,0 +1,5 @@
+div {
+    width: 200px; /*sets the width of div elements*/
+    height: 200px; /*sets the height of div elements*/
+    /*these affect the content area as well*/
+}
