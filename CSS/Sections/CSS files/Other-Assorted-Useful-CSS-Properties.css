@@ -1,8 +1,8 @@
-section {
+/* section {
     width: 500px;
     height: 500px;
     background-color: magenta;
-}
+} */
 
 #rgba {
     width: 50%;
@@ -15,4 +15,37 @@ section {
     height:50%;
     background-color: yellow;
     opacity: 0.5; /*opacity affects the entire element, not just the background colour*/
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle {
+    background-color: #81b29a;
+}
+
+#static #middle {
+    position: static; /*the position element affects where the element is positioned*/
+} /*static is the standard positioning and follows the normal flow of the document*/
+
+#relative #middle {
+    position: relative; /*the position element affects where the element is positioned*/
+    top: 100px; /*the relative property can be used to shift the element relative to where it would be with the static property*/
+    left: 100px;
+}
+
+#absolute #middle {
+    position: absolute; /*the absolute property removes the element from the normal document flow and no spcae is created for the element*/
+}
+
+#fixed #middle {
+    position: fixed; /*fixed is similar to absolute, but its psoition is always relative to the containing block rather than the parent container*/
+    top: 0px;
+    left: 0px;
 }
