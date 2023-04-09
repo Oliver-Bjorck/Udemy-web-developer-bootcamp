@@ -9,11 +9,12 @@ h1 {
 #container {
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    height: 1200px;
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex; /*essentially turns on flexbox*/
     flex-direction: column; /*flex-direction affects the axis the elements are directed on*/
+    justify-content: flex-end; /*defines how the browser distributes space between and around content items along the main axis of a flex container*/
 }
 
 #container div {
