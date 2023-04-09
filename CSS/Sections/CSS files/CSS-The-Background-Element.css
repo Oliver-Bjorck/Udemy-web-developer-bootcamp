@@ -1,0 +1,25 @@
+section.longhand {
+    width: 80%;
+    height: 800px;
+    background-image: url("https://images.unsplash.com/photo-1593532847216-85672068bef2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"); /*background image sets one or more background images on an element*/
+    background-size: cover; /*background size sets the size of the image, there a many values*/
+    /*contain scales the image as large as possible without cropping or stretching the image for example*/
+    /*cover does not stretch the image but does crop it if necessary*/
+    background-position: top; /*background-position sets the initial position of the background image*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}
+
+section.shorthand {
+    width: 80%;
+    height: 800px;
+    background: url("https://images.unsplash.com/photo-1594656884664-a7eda639b34a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60") center/40% no-repeat, blueviolet;
+    /*the background property can be used as shorthand for all the properties we've learned above (and more), the positioning of each value doesn't matter*/
+    /*however if using the background-size property, it must follow immediately after the position element, separated by a '/'*/
+    /*you can also use multiple backgrounds (both images and colours*/
+    margin: 0 auto;
+}
