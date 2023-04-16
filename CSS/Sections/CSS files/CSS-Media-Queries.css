@@ -1,0 +1,24 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+}
+
+ul, li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+/*@media can be used to create responsive web pages*/
+@media (min-width: 600px) and (max-width: 800px) { /*the property and value within the brackets sets when these properties will be applied based on the viewport*/
+    h1 {
+        color: purple;
+    }
+}
