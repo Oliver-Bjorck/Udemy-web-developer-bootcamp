@@ -13,14 +13,16 @@ h1 {
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex; /*essentially turns on flexbox*/
-    flex-direction: column; /*flex-direction affects the axis the elements are directed on*/
+    flex-direction: row; /*flex-direction affects the axis the elements are directed on*/
     justify-content: center; /*defines how the browser distributes space between and around content items along the main axis of a flex container*/
     flex-wrap: wrap; /*determines whether content of a flexbox should remain on one line or can wrap onto multiple */
-    align-items: center; /*sets the align-self value on all direct children as a group*/
+    align-items: flex-end; /*sets the align-self value on all direct children as a group*/
+    align-content: center; /*sets the distribution of space between and around content items along a flexbox's cross-axis*/
+    /*align-self is similar to align items but is used for singular elements*/
 }
 
 #container div {
-    width: 200px;
+    width: 600px;
     height: 200px;
     text-align: center;
 }
