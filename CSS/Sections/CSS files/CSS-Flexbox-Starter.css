@@ -16,13 +16,22 @@ h1 {
     flex-direction: row; /*flex-direction affects the axis the elements are directed on*/
     justify-content: center; /*defines how the browser distributes space between and around content items along the main axis of a flex container*/
     flex-wrap: wrap; /*determines whether content of a flexbox should remain on one line or can wrap onto multiple */
-    align-items: flex-end; /*sets the align-self value on all direct children as a group*/
-    align-content: center; /*sets the distribution of space between and around content items along a flexbox's cross-axis*/
+    /* align-items: flex-end; sets the align-self value on all direct children as a group */
+    /* align-content: center; sets the distribution of space between and around content items along a flexbox's cross-axis */
     /*align-self is similar to align items but is used for singular elements*/
 }
 
 #container div {
-    width: 600px;
+    width: 200px;
     height: 200px;
     text-align: center;
+    flex-basis: 200px; /*sets the initial main size of a flex item*/
+    /*flex-grow: 1;*/ /*specifies how much of the flex container's remaining space should be assigned to the flex item's main size*/
+}
+
+div:nth-of-type(1) {
+    flex-grow: 1;
+}
+div:nth-of-type(5) {
+    flex-grow: 2;
 }
