@@ -1,0 +1,1 @@
+console.log("Hello from our first JS file") //console.log will print the contents of the log method into the console of our html file
