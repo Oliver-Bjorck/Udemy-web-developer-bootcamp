@@ -12,12 +12,13 @@ let attempts = 1;
 
 while(parseInt(guess) !== targetNum) {
     if (guess === 'q') break;
-    attempts++;
     if (guess > targetNum) {
         guess = prompt("Too high, try again!");
+        attempts++;
     }
     else if (guess < targetNum) {
         guess = prompt("Too low, try again!");
+        attempts++;
     }
     else {
         guess = prompt("Invalid input. Please enter a number or type 'q' to quit")
