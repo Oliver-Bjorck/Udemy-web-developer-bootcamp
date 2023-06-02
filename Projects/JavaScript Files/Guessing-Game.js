@@ -7,7 +7,7 @@ while (!maximum) { //loops if user doesn't input a valid number
 const targetNum = Math.floor(Math.random() * maximum) + 1; //generates a random number within the range the user sets
 console.log(targetNum);
 
-let guess = parseInt(prompt("Enter your first guess"));
+let guess = parseInt(prompt("Enter your first guess (type 'q' to quit)"));
 let attempts = 1;
 
 while(parseInt(guess) !== targetNum) {
@@ -16,8 +16,11 @@ while(parseInt(guess) !== targetNum) {
     if (guess > targetNum) {
         guess = prompt("Too high, try again!");
     }
-    else {
+    else if (guess < targetNum) {
         guess = prompt("Too low, try again!");
+    }
+    else {
+        guess = prompt("Invalid input. Please enter a number or type 'q' to quit")
     }
 }
 
