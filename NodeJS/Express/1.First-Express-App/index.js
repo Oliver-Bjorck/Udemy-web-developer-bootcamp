@@ -33,6 +33,14 @@ app.get('/dogs', (req, res) => {
     res.send('WOOF')
 })
 
+app.get('/search', (req, res) => {
+    const {q} = req.query;
+    if (!q) {
+        res.send('Nothing found if nothing searched');
+    }
+    res.send(`<h1>Search results for: ${q}</h1>`);
+})
+
 app.get('*', (req, res) => { //using the * will cover all other paths, this has to be put last otherwise the other app.gets won't run
     res.send("I don't know that  route")
 })
