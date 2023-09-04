@@ -8,7 +8,7 @@ const app = express();
 // })
 
 app.get('/', (req, res) => { //app.get routes HTTP GET requests to the specified path
-    res.send('This is the home page!')
+    res.send('This is the home page!!!!')
 })
 
 app.get('/r/:subreddit', (req, res) => { //this syntax can be used to create a path pattern that te server can recognise
