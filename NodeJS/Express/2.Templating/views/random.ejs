@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>Your random number is: <%= rand %></h1> <!--We can use the passed through object in our template, making it a lot cleaner-->
+
+    <% if(rand % 2 === 0) { %> <!--using this syntax will run javascript code without displaying it on the page-->
+        <h2>That is an even number</h2>
+    <% } else { %> <!--essentially you put the javascript in the ejs braces and the html you want to run in between-->
+        <h2>That is an odd number</h2>
+    <% } %>
+    <h3>That number is: <%= rand%2===0 ? 'EVEN' : 'ODD' %></h3> <!--an alternate way of achieving the same outcome-->
+
 </body>
 </html>
