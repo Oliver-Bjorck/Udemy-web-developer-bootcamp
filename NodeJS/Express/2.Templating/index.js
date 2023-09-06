@@ -9,6 +9,13 @@ app.get('/', (req, res) => {
     res.render("home.ejs"); //this will render the ejs file as the html template
 }) //express searches automatically fora 'views' directory as default
 
+app.get("/cats", (req, res) => {
+    const cats = [
+        "Blue", "Rocket", "Monty", "Stephanie", "Winston"
+    ]
+    res.render("cats", { cats})
+})
+
 app.get("/r/:subreddit", (req, res) => {
     const { subreddit } = req.params;
     res.render("subreddit", {subreddit});
