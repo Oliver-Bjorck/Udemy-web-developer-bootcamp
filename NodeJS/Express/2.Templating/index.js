@@ -10,6 +10,11 @@ app.get('/',
     res.render("home.ejs") //this will render the ejs file as the html template
 }) //express searches automatically fora 'views' directory as default
 
+app.get("/random", (req, res) => {
+    const randomNum = Math.floor(Math.random() * 10) + 1;
+    res.render("random", {rand: randomNum}); //we can pass through objects to our template
+})
+
 app.listen(3000, () => {
     console.log("Listening on port 3000");
 })
