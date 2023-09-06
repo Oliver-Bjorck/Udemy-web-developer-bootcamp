@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const redditData = require("./data.json");
 
 app.set("view engine", "ejs"); //this will set the view engine to ejs, meaning we don't need to require it like other npm packages
 app.set("views", path.join(__dirname, "/views")); //this line of code allows us to access the home.ejs file from any directory
@@ -18,7 +19,13 @@ app.get("/cats", (req, res) => {
 
 app.get("/r/:subreddit", (req, res) => {
     const { subreddit } = req.params;
-    res.render("subreddit", {subreddit});
+    const data = redditData[subreddit];
+    if(data) {
+        res.render("subreddit", {...data});
+    } else {
+        res.render("notfound", {subreddit})
+    }
+    
 })
 
 app.get("/random", (req, res) => {
