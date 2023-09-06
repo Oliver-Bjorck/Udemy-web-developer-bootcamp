@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
-</head>
-<body>
+<%- include("partials/head")%>
+
+    <%- include("partials/nav")%>
+
     <h1>Your random number is: <%= rand %></h1> <!--We can use the passed through object in our template, making it a lot cleaner-->
 
     <% if(rand % 2 === 0) { %> <!--using this syntax will run javascript code without displaying it on the page-->
@@ -16,5 +12,4 @@
     <p>Here's an alternate way of doing it:</p>
     <h3>That number is: <%= rand%2===0 ? 'EVEN' : 'ODD' %></h3> <!--an alternate way of achieving the same outcome-->
 
-</body>
-</html>
+<%- include("partials/footer")%>
