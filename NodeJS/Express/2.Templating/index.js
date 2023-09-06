@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const redditData = require("./data.json");
 
+app.use(express.static(path.join(__dirname, "public"))); //using express.static will allow you to serve static files such as css, js, or images
+
 app.set("view engine", "ejs"); //this will set the view engine to ejs, meaning we don't need to require it like other npm packages
 app.set("views", path.join(__dirname, "/views")); //this line of code allows us to access the home.ejs file from any directory
 
