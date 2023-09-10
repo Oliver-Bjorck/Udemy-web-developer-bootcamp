@@ -37,7 +37,7 @@ app.get("/comments/new", (req, res) => {
 app.post("/comments", (req, res) => {
     const {username, comment} = req.body;
     comments.push({username, comment});
-    res.send("It Worked!");
+    res.redirect("/comments"); //res.redirect does what it says, it will redirect to the desired destination
 })
 
 app.get("/tacos", (req, res) => {
