@@ -10,7 +10,7 @@ app.use(methodOverride("_method"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const comments = [
+let comments = [
     {
         id: uuid(),
         username: "Todd",
@@ -64,6 +64,12 @@ app.patch("/comments/:id", (req, res) => { //app.patch allows us to edit and cha
     const newCommentText = req.body.comment; //then retrieving the new comment text, in this scenario it's simply from the request body 
     const foundComment = comments.find(c => c.id === id); // then we find the comment attached to the id we found
     foundComment.comment = newCommentText; //lastly we're setting the new comment text to replace the old comment text
+    res.redirect("/comments");
+})
+
+app.delete("/comments/:id", (req, res) => {
+    const { id } = req.params;
+    comments = comments.filter(c => c.id !==id); //this will create a copy of the array, with the deleted comment removed
     res.redirect("/comments");
 })
 
