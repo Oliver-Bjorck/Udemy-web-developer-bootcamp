@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 const { v4: uuid } = require("uuid"); //uuid creates a universally unique id (hence the name)
 
 app.use(express.urlencoded({ extended: true })); //this middleware parses the express body as urlencoded data
 app.use(express.json()); //whereas this middleware parses the express body as JSON
+app.use(methodOverride("_method"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -49,6 +51,12 @@ app.get("/comments/:id", (req, res) => {
     const { id } = req.params;
     const comment = comments.find(c => c.id === id);
     res.render("comments/show", { comment });
+})
+
+app.get("/comments/:id/edit", (req, res) => {
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id);
+    res.render("comments/edit", { comment })
 })
 
 app.patch("/comments/:id", (req, res) => { //app.patch allows us to edit and change parts of our app, in this context our comments
