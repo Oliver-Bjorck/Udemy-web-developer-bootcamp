@@ -51,6 +51,14 @@ app.get("/comments/:id", (req, res) => {
     res.render("comments/show", { comment });
 })
 
+app.patch("/comments/:id", (req, res) => { //app.patch allows us to edit and change parts of our app, in this context our comments
+    const { id } = req.params; //first we are retrieving the id from the url
+    const newCommentText = req.body.comment; //then retrieving the new comment text, in this scenario it's simply from the request body 
+    const foundComment = comments.find(c => c.id === id); // then we find the comment attached to the id we found
+    foundComment.comment = newCommentText; //lastly we're setting the new comment text to replace the old comment text
+    res.redirect("/comments");
+})
+
 app.get("/tacos", (req, res) => {
     res.send("Get /tacos response");
 })
