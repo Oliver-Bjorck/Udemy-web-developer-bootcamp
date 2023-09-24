@@ -51,9 +51,13 @@ productSchema.methods.toggleOnSale = function() { //this created method allows u
     return this.save();
 }
 
-productSchema.methods.addCategory = function(newCat) {
+productSchema.methods.addCategory = function(newCat) { //instance methods operate on an indivdual instance of a model
     this.categories.push(newCat);
     return this.save();
+}
+
+productSchema.statics.fireSale = function() { //whereas static methods apply to the whole model
+    return this.updateMany({}, {onSale: true, price: 0});
 }
 
 const Product = mongoose.model("Product", productSchema);
@@ -67,7 +71,9 @@ const findProduct = async () => {
     console.log(foundProduct);
 }
 
-findProduct();
+Product.fireSale().then(res => console.log(res));
+
+// findProduct();
 
 // const bike = new Product({name: "Cycling Jersey", price: 28.50, categories: ['Cycling'], size: "XS"});
 // bike.save()
