@@ -17,7 +17,8 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
-        min: 0 //minimum value of number
+        min: [0, "Price must be positive you dodo"] //minimum value of number
+        //we can setup a custom validation error message
     },
     onSale: {
         type: Boolean,
@@ -33,12 +34,16 @@ const productSchema = new mongoose.Schema({
             type: Number,
             default: 0
         }
+    },
+    size: {
+        type: String,
+        enum: ["S", "M", "L"]
     }
 });
 
 const Product = mongoose.model("Product", productSchema);
 
-const bike = new Product({name: "Bike Helmet", price: 19.5, categories: ['Cycling', 'Safety']});
+const bike = new Product({name: "Cycling Jersey", price: 28.50, categories: ['Cycling'], size: "XS"});
 bike.save()
 .then(data => {
     console.log("It Worked!");
@@ -48,3 +53,13 @@ bike.save()
     console.log("Oh no error!");
     console.log(err);
 })
+
+// Product.findOneAndUpdate({name: "Tyre Pump"}, {price: -19.99}, {new: true, runValidators: true}) //runValidators will check updates against the schema constraints
+// .then(data => {
+//     console.log("It Worked!");
+//     console.log(data);
+// })
+// .catch(err => {
+//     console.log("Oh no error!");
+//     console.log(err);
+// })
