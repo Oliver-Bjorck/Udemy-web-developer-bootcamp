@@ -25,13 +25,13 @@ app.use("/dogs", (req, res, next) => {
     return next();
 })
 
-app.use((req, res, next) => { //we can even use middleware to create authetication (not actually like this though!)
+const verifyPassword = (req, res, next) => { //we can even use middleware to create authetication (not actually like this though!)
     const {password} = req.query;
     if(password === "chickennugget") {
         return next();
     }
     res.send("Sorry, you need a password!")
-})
+}
 
 app.get("/", (req, res) => {
     console.log(`request date: ${req.requestTime}`) //requestTime adds a timestamp of your request
@@ -42,7 +42,7 @@ app.get("/dogs", (req, res) => {
     res.send("Woof Woof")
 })
 
-app.get("/secret", (req, res) => {
+app.get("/secret", verifyPassword, (req, res) => { //we can use the authentication to protect certain routes
     res.send("Sometimes I wear headphones in public so I don't have to talk to anyone")
 })
 
