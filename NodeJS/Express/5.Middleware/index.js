@@ -17,7 +17,12 @@ app.use(morgan("tiny")); //morgan logs the status code and response time for eac
 app.use((req, res, next) => {
     req.requestTime = Date.now(); //we now have access to requestTime in each of our route handlers
     console.log(req.method, req.path); //we can use defined middleware to show the method and path of a request
-    next();
+    return next();
+})
+
+app.use("/dogs", (req, res, next) => {
+    console.log("I love dogs!");
+    return next();
 })
 
 app.get("/", (req, res) => {
@@ -27,6 +32,10 @@ app.get("/", (req, res) => {
 
 app.get("/dogs", (req, res) => {
     res.send("Woof Woof")
+})
+
+app.use((req, res) => {
+    res.status(404).send("Not Found!") //we can use this line of code as a 404 route, when nothing is found matching the request
 })
 
 app.listen(3000, () => {
