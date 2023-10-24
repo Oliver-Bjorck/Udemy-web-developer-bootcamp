@@ -25,6 +25,14 @@ app.use("/dogs", (req, res, next) => {
     return next();
 })
 
+app.use((req, res, next) => { //we can even use middleware to create authetication (not actually like this though!)
+    const {password} = req.query;
+    if(password === "chickennugget") {
+        return next();
+    }
+    res.send("Sorry, you need a password!")
+})
+
 app.get("/", (req, res) => {
     console.log(`request date: ${req.requestTime}`) //requestTime adds a timestamp of your request
     res.send("Home Page!")
@@ -32,6 +40,10 @@ app.get("/", (req, res) => {
 
 app.get("/dogs", (req, res) => {
     res.send("Woof Woof")
+})
+
+app.get("/secret", (req, res) => {
+    res.send("Sometimes I wear headphones in public so I don't have to talk to anyone")
 })
 
 app.use((req, res) => {
