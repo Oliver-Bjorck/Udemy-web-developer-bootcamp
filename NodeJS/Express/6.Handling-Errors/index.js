@@ -52,6 +52,13 @@ app.use((req, res) => {
     res.status(404).send("Not Found!")
 })
 
+app.use((err, req, res, next) => { //when formatted like this, express will consider this an error handler
+    console.log("*********************************") //the error handler has to be after all the other app.use handlers
+    console.log("*************ERROR***************")
+    console.log("*********************************")
+    next(err) //calling next and passing in err will hit the built in error handler
+})
+
 app.listen(3000, () => {
     console.log("App is running on localhost:3000")
 })
