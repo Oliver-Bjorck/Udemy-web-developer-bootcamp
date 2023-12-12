@@ -6,4 +6,4 @@ class ExpressError extends Error {
     }
 }
 
-moduke.exports = ExpressError;
+module.exports = ExpressError;
