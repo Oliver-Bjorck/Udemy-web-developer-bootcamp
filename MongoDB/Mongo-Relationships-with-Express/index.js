@@ -3,9 +3,10 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const Product = require("./models/product");
+const Farm = require("./models/farm");
 const methodOverride = require("method-override");
 
-mongoose.connect("mongodb://localhost:27017/farmStand")
+mongoose.connect("mongodb://localhost:27017/farmStandTake2")
     .then(() => {
         console.log("Mongo Connection Open!");
     })
@@ -18,6 +19,25 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"));
+
+// FARM ROUTES
+
+app.get("/farms", async (req, res) => {
+    const farms = await Farm.find({});
+    res.render("farms/index", {farms})
+})
+
+app.get("/farms/new", (req, res) => {
+    res.render("farms/new");
+})
+
+app.post("/farms", async (req, res) => {
+    const farm = new Farm(req.body);
+    await farm.save();
+    res.redirect("/farms")
+})
+
+//PRODUCT ROUTES
 
 const categories = ["fruit", "vegetable", "dairy"]
 
