@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const shelterRoutes = require("./routes/shelters");
-const dogRoutes = require("./routes/dogs")
+const dogRoutes = require("./routes/dogs");
+const adminRoutes = require("./routes/admin")
+
+app.use("/admin", adminRoutes);
 
 app.use("/shelters", shelterRoutes);
 
