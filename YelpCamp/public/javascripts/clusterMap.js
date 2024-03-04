@@ -35,20 +35,20 @@ mapboxgl.accessToken = mapToken;
                 'circle-color': [
                     'step',
                     ['get', 'point_count'],
-                    '#51bbd6',
-                    100,
-                    '#f1f075',
-                    750,
-                    '#f28cb1'
+                    '#90a955',
+                    10,
+                    '#31572c',
+                    30,
+                    '#132a13'
                 ],
                 'circle-radius': [
                     'step',
                     ['get', 'point_count'],
+                    15,
+                    10,
                     20,
-                    100,
                     30,
-                    750,
-                    40
+                    25
                 ]
             }
         });
@@ -71,7 +71,7 @@ mapboxgl.accessToken = mapToken;
             source: 'campgrounds',
             filter: ['!', ['has', 'point_count']],
             paint: {
-                'circle-color': '#11b4da',
+                'circle-color': '#90a955',
                 'circle-radius': 4,
                 'circle-stroke-width': 1,
                 'circle-stroke-color': '#fff'
